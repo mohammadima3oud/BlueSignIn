@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/gradient_background_light_blue"
+	tools:context="com.next.bluesignin.SignUpActivity">
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/glCenterHorizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.5" />
+
+	<TextView
+		android:id="@+id/tvAlmostThere"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginBottom="8dp"
+		android:clickable="true"
+		android:text="Almost there!"
+		android:textColor="@color/textColorPrimary"
+		android:textSize="30sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/tvExcited"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<TextView
+		android:id="@+id/tvExcited"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginEnd="32dp"
+		android:layout_marginBottom="64dp"
+		android:text="We are excited to see you here!"
+		android:textColor="@color/textColorPrimary"
+		android:textSize="30sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/tilUsername"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/tilUsername"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginEnd="32dp"
+		android:layout_marginBottom="8dp"
+		android:theme="@style/TextInputLayoutTheme"
+		app:layout_constraintBottom_toTopOf="@+id/tilEmail"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/etUsername"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Username"
+			android:inputType="text"
+			android:maxLines="1" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/tilEmail"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginEnd="32dp"
+		android:layout_marginBottom="8dp"
+		android:theme="@style/TextInputLayoutTheme"
+		app:layout_constraintBottom_toTopOf="@+id/glCenterHorizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/glCenterHorizontal">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/etEmail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Email"
+			android:inputType="textEmailAddress"
+			android:maxLines="1"
+			android:textColorHint="@color/textColorPrimary" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/tilPassword"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="32dp"
+		android:theme="@style/TextInputLayoutTheme"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/etPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Password"
+			android:inputType="textPassword"
+			android:maxLines="1"
+			android:textColorHint="@color/textColorPrimary" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<Button
+		android:id="@+id/bSignUp"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="60dp"
+		android:layout_marginEnd="32dp"
+		android:background="@drawable/rounded_button_background"
+		android:text="Sign up"
+		android:textAllCaps="false"
+		android:textColor="@color/materialLightBlue700"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+
+	<TextView
+		android:id="@+id/tvHaveAnAccount"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="16dp"
+		android:text="Already have an account?"
+		android:textColor="@color/textColorSecondary"
+		android:textSize="14sp"
+		app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/bSignUp" />
+
+	<TextView
+		android:id="@+id/tvSignIn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginEnd="8dp"
+		android:text="Sign in."
+		android:textColor="@color/textColorPrimary"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toEndOf="@+id/tvHaveAnAccount"
+		app:layout_constraintTop_toTopOf="@+id/tvHaveAnAccount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
